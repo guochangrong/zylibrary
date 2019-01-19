@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls import include
+from rest_framework.schemas import get_schema_view
+
+schema_view = get_schema_view(title='Web Api')
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^api', schema_view),
+    url(r'^book/', include('book.urls')),
 ]
