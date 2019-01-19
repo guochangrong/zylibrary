@@ -160,6 +160,7 @@ class Shift(Base):
 
 
 class FeedBack(Base):
+    """意见反馈"""
     user_profile = models.ForeignKey(UserProfile, on_delete=models.DO_NOTHING, null=True)
     content = models.TextField(max_length=100)
     wx_form_id = models.CharField(max_length=100, null=True, editable=False)
