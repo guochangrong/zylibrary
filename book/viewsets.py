@@ -9,7 +9,7 @@ from rest_framework import viewsets
 
 class CategoryViewSets(viewsets.ModelViewSet):
     queryset = Category.objects.all()
-    serializer_class = Category
+    serializer_class = CategorySerializer
 
     def list(self, request, *args, **kwargs):
         try:
@@ -85,44 +85,44 @@ class CategoryViewSets(viewsets.ModelViewSet):
 
 class ShelfViewSets(viewsets.ModelViewSet):
     queryset = Shelf.objects.filter(status='AC').all()
-    serializer_class = Shelf
+    serializer_class = ShelfSerializer
 
 
 class BookViewSets(viewsets.ModelViewSet):
     queryset = Book.objects.filter(status='AC').all()
-    serializer_class = Book
+    serializer_class = BookSerializer
 
 
 class UserProfileViewSets(viewsets.ModelViewSet):
     queryset = UserProfile.objects.filter(status='AC').all()
-    serializer_class = UserProfile
+    serializer_class = UserProfileSerializer
 
 
 class CheckOutViewSets(viewsets.ModelViewSet):
     queryset = CheckOut.objects.filter(status='AC').all()
-    serializer_class = CheckOut
+    serializer_class = CheckOutSerializer
 
 
 class CommentViewSets(viewsets.ModelViewSet):
     queryset = Comment.objects.filter(status='AC').all()
-    serializer_class = Comment
+    serializer_class = CommentSerializer
 
 
 class NoteViewSets(viewsets.ModelViewSet):
     queryset = Note.objects.filter(status='AC').all()
-    serializer_class = Note
+    serializer_class = NoteSerializer
 
 
 class RentViewSets(viewsets.ModelViewSet):
     queryset = Rent.objects.filter(status='AC').all()
-    serializer_class = Rent
+    serializer_class = RentSerializer
 
 
 class ShiftViewSets(viewsets.ModelViewSet):
     queryset = Shift.objects.filter(status='AC').all()
-    serializer_class = Shift
+    serializer_class = ShiftSerializer
 
 
 class FeedBackViewSets(viewsets.ModelViewSet):
     queryset = FeedBack.objects.filter(status='AC').all()
-    serializer_class = FeedBack
+    serializer_class = FeedBackSerializer
